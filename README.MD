@@ -3,6 +3,7 @@
 ## Project Overview
 
 **Project Title**:  PIZZA Sales Analysis
+
 **Level**: Intermediate  
 **Database**: PIZZAHUT-PROJECT3
 
@@ -73,9 +74,8 @@ CREATE TABLE pizzas
 ### 2.BASIC SQL TASKS 
 
 
--**Task 1. Retrieve the total number of orders placed.**
+-**Task 1. Retrieve the total number of orders placed.
 
-```
  ```sql
   select 
  count(order_id) as total_orders from orders;
