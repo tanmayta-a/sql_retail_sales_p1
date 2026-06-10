@@ -2,13 +2,11 @@
 
 ## Project Overview
 
-**Project Title**: PIZZA Sales Analysis
+**Project Title**:  PIZZA Sales Analysis
 **Level**: Intermediate  
 **Database**: PIZZAHUT-PROJECT3
 
 This project demonstrates the implementation of a PIZZA SALES  using SQL. It includes creating and managing tables, performing CRUD operations, and executing advanced SQL queries. The goal is to showcase skills in database design, manipulation, and querying.
-
-![PIZZA SALES](images/pizza-3010062_640.jpg)
 
 ## Objectives
 
