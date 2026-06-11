@@ -22,7 +22,7 @@ This project demonstrates the implementation of a ONLINE BOOK STORE using SQL. I
 - **Table Creation**: Created tables for customers, orders, books. Each table includes relevant columns and relationships.
 
 ```sql
-CREATE DATABASE oneline_book_store;
+CREATE DATABASE online_book_store;
 
 DROP TABLE IF EXISTS customers;
 CREATE TABLE customers
