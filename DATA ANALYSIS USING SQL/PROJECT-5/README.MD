@@ -6,7 +6,7 @@ This project focuses on analyzing product and inventory data from Zepto, an onli
 
 The project demonstrates practical SQL skills, including data exploration, data cleaning, aggregation, conditional logic, and business-oriented reporting.
 
-Objectives:-
+##Objectives
 
 Explore the Zepto product dataset to understand its structure and quality.
 Identify and resolve data issues that could affect analysis.
@@ -19,7 +19,7 @@ Dataset Information
 
 The project uses a table named zepto, containing product-level information.
 
-Table Schema:-
+##Table Schema:-
 
 Column Name	 Data Type  	Description
 sku_id	SERIAL (Primary Key) Unique product identifier
@@ -33,7 +33,7 @@ weight_in_gms	INTEGER	 Product weight in grams
 out_of_stock	BOOLEAN	 Stock availability status
 quantity	INTEGER  	Product quantity/unit count
 
-Technologies Used:-
+##Technologies Used:-
 
 PostgreSQL
 SQL
@@ -41,9 +41,10 @@ Data Exploration Techniques
 Data Cleaning Operations
 Aggregation and Analytical Queries
 
-Project Workflow:-
+##Project Workflow:-
 
 1. Database Setup
+
 Created the zepto table.
 Defined appropriate data types and constraints.
 Assigned sku_id as the primary key.
@@ -151,7 +152,7 @@ Weight × Available Quantity
 
 Purpose: Understand warehouse space requirements and inventory distribution.
 
-Key SQL Concepts Demonstrated
+##Key SQL Concepts Demonstrated
 
 CREATE TABLE
 SELECT
@@ -187,7 +188,7 @@ Develop inventory replenishment recommendations.
 Apply predictive analytics to forecast demand patterns.
 Integrate customer purchase behavior for deeper insights.
 
-**Conclusion**
+##Conclusion
 
 This project showcases how SQL can be used not only for querying data but also for transforming raw retail datasets into actionable business intelligence. Through systematic exploration, cleaning, and analytical querying, the project provides meaningful insights into Zepto's product portfolio, inventory status, and pricing strategies.
 
