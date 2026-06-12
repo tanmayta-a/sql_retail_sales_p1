@@ -15,9 +15,7 @@ Evaluate discount strategies across different product categories.
 Estimate category-wise revenue potential.
 Discover high-value products and pricing patterns.
 Generate inventory insights that can assist operational planning.
-Dataset Information
-
-The project uses a table named zepto, containing product-level information.
+Dataset Information:- The project uses a table named zepto, containing product-level information.
 
 ##Table Schema:-
 
