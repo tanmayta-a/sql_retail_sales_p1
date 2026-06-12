@@ -142,15 +142,15 @@ Several cleaning steps were applied to improve data quality:
 
 ->      Product Weight Segmentation
 
---   Grouped products into weight categories using CASE statements.
+           --   Grouped products into weight categories using CASE statements.
 
---   Categories used:
+        --   Categories used:
 
-Low
-Medium
-Bulk
+             Low
+            Medium
+            Bulk
 
---  Purpose: Support packaging and inventory segmentation analyses.
+           --  Purpose: Support packaging and inventory segmentation analyses.
 
 ->     Total Inventory Weight by Category
 
