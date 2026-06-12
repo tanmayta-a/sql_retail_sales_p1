@@ -18,7 +18,6 @@ Discover high-value products and pricing patterns.
 Generate inventory insights that can assist operational planning.
 Dataset Information:- The project uses a table named zepto, containing product-level information.
 
-##Table Schema:-
 
 ## Table Schema
 
@@ -70,114 +69,136 @@ Detected products appearing under multiple SKUs.
 
 Several cleaning steps were applied to improve data quality:
 
-Removing Invalid Pricing Records
+(1)   Removing Invalid Pricing Records
 
-Products having an MRP equal to zero were identified and removed.
+      ->  Products having an MRP equal to zero were identified and removed.
 
-DELETE FROM zepto
-WHERE mrp = 0;
-Price Conversion
 
-The pricing data was originally stored in paise and converted into rupees.
+         DELETE FROM zepto
+         WHERE mrp = 0;
 
-UPDATE zepto
-SET mrp = mrp / 100.0,
-    discounted_selling_price = discounted_selling_price / 100.0;
-Data Type Optimization
+(2)    Price Conversion
 
-The discounted selling price column was modified to support decimal precision.
+     ->    The pricing data was originally stored in paise and converted into rupees.
 
-ALTER TABLE zepto
-ALTER COLUMN discounted_selling_price
-TYPE NUMERIC(8,2);
-Business Insights Generated
-Top Discounted Products
+            UPDATE zepto
+           SET mrp = mrp / 100.0,
+           discounted_selling_price = discounted_selling_price / 100.0;
 
-Identified products offering the highest discount percentages.
+(3)    Data Type Optimization
 
-Purpose: Understand aggressive promotional strategies and value offerings.
+     ->     The discounted selling price column was modified to support decimal precision.
 
-High-MRP Products That Are Out of Stock
+           ALTER TABLE zepto
+           ALTER COLUMN discounted_selling_price
+           TYPE NUMERIC(8,2);
 
-Filtered expensive products that were unavailable.
 
-Purpose: Detect potential revenue loss due to stock shortages.
+(4)    Business Insights Generated
 
-Category-wise Revenue Estimation
+->  Top Discounted Products
 
-Estimated revenue using:
+->  Identified products offering the highest discount percentages.
 
-Discounted Selling Price × Available Quantity
+     --Purpose: Understand aggressive promotional strategies and value offerings.
 
-Purpose: Determine categories contributing the highest inventory value.
+->   High-MRP Products That Are Out of Stock
 
-Premium Products with Minimal Discounts
+        --Filtered expensive products that were unavailable.
 
-Analyzed products satisfying:
+        --Purpose: Detect potential revenue loss due to stock shortages.
 
-MRP greater than ₹500
-Discount less than 10%
+->   Category-wise Revenue Estimation
 
-Purpose: Identify premium products maintaining pricing power.
+       --Estimated revenue using:
 
-Categories with Highest Average Discounts
+        --Discounted Selling Price × Available Quantity
 
-Calculated average discounts across categories.
+       --Purpose: Determine categories contributing the highest inventory value.
 
-Purpose: Evaluate category-specific pricing strategies.
+->      Premium Products with Minimal Discounts
 
-Price per Gram Analysis
+         --Analyzed products satisfying:
 
-Computed the cost efficiency of products weighing more than 100 grams.
+->      MRP greater than ₹500 AND Discount less than 10%
 
-Formula:
+          --Purpose: Identify premium products maintaining pricing power.
 
-Price per Gram = Discounted Selling Price ÷ Weight
+->  Categories with Highest Average Discounts
 
-Purpose: Identify products offering better value to customers.
+->  Calculated average discounts across categories.
 
-Product Weight Segmentation
+        --Purpose: Evaluate category-specific pricing strategies.
 
-Grouped products into weight categories using CASE statements.
+->   Price per Gram Analysis
 
-Categories used:
+        --Computed the cost efficiency of products weighing more than 100 grams.
+
+->  Formula:
+
+-- Price per Gram = Discounted Selling Price ÷ Weight
+
+-- Purpose: Identify products offering better value to customers.
+
+->      Product Weight Segmentation
+
+--   Grouped products into weight categories using CASE statements.
+
+--   Categories used:
 
 Low
 Medium
 Bulk
 
-Purpose: Support packaging and inventory segmentation analyses.
+--  Purpose: Support packaging and inventory segmentation analyses.
 
-Total Inventory Weight by Category
+->     Total Inventory Weight by Category
 
-Calculated the total stock weight held within each category.
+         --Calculated the total stock weight held within each category.
 
-Formula:
+-> Formula:
 
-Weight × Available Quantity
+  --  Weight × Available Quantity
 
-Purpose: Understand warehouse space requirements and inventory distribution.
+--   Purpose: Understand warehouse space requirements and inventory distribution.
 
 ##Key SQL Concepts Demonstrated
 
 CREATE TABLE
+
 SELECT
+
 DISTINCT
+
 GROUP BY
+ 
 HAVING
+
 ORDER BY
+
 CASE WHEN
+
 Aggregate Functions:
+
 COUNT()
+
 SUM()
+
 AVG()
+
 ROUND()
+
 Filtering with WHERE
+
 Data Modification:
+
 UPDATE
+
 DELETE
+
 ALTER TABLE
-Potential Business Impact
+
+## Potential Business Impact:
 
 The analysis can help Zepto stakeholders:
 
