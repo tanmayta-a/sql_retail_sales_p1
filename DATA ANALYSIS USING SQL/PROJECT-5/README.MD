@@ -112,7 +112,7 @@ Several cleaning steps were applied to improve data quality:
 
        --Estimated revenue using:
 
-        --Discounted Selling Price × Available Quantity
+       --Discounted Selling Price × Available Quantity
 
        --Purpose: Determine categories contributing the highest inventory value.
 
@@ -122,7 +122,7 @@ Several cleaning steps were applied to improve data quality:
 
             --  MRP greater than ₹500 AND Discount less than 10%
 
-          --Purpose: Identify premium products maintaining pricing power.
+            --Purpose: Identify premium products maintaining pricing power.
 
 ->  Categories with Highest Average Discounts
 
@@ -136,9 +136,9 @@ Several cleaning steps were applied to improve data quality:
 
 ->  Formula:
 
--- Price per Gram = Discounted Selling Price ÷ Weight
+          -- Price per Gram = Discounted Selling Price ÷ Weight
 
--- Purpose: Identify products offering better value to customers.
+        -- Purpose: Identify products offering better value to customers.
 
 ->      Product Weight Segmentation
 
@@ -158,9 +158,9 @@ Bulk
 
 -> Formula:
 
-  --  Weight × Available Quantity
+           --  Weight × Available Quantity
 
---   Purpose: Understand warehouse space requirements and inventory distribution.
+         --   Purpose: Understand warehouse space requirements and inventory distribution.
 
 ##Key SQL Concepts Demonstrated
 
@@ -220,6 +220,10 @@ Integrate customer purchase behavior for deeper insights.
 This project showcases how SQL can be used not only for querying data but also for transforming raw retail datasets into actionable business intelligence. Through systematic exploration, cleaning, and analytical querying, the project provides meaningful insights into Zepto's product portfolio, inventory status, and pricing strategies.
 
 Author: TANMAYTA AGRAWAL
+
+
 Project: Zepto Sales Analysis Using SQL
+
+
 Database: PostgreSQL
 
