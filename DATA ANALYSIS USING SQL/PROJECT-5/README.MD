@@ -118,9 +118,9 @@ Several cleaning steps were applied to improve data quality:
 
 ->      Premium Products with Minimal Discounts
 
-         --Analyzed products satisfying:
+->         Analyzed products satisfying:
 
-->      MRP greater than ₹500 AND Discount less than 10%
+            --  MRP greater than ₹500 AND Discount less than 10%
 
           --Purpose: Identify premium products maintaining pricing power.
 
